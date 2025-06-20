@@ -1,0 +1,104 @@
+<section class="w-full flex justify-center items-center">
+    <div class="">
+            <p class="text-center text-gray-300 text-sm footer-text">
+                © 2025 Dr Rawdy Reales. Todos los derechos reservados
+            </p>
+        </div>
+
+</section>
+
+<style>
+    section {
+        height: 3vh;
+        background-color: #161113;
+    }
+
+    /* MacBook Pro 16" y pantallas grandes */
+    @media (max-width: 1728px) {
+        .footer-text {
+            font-size: 13px;
+        }
+    }
+
+    /* MacBook Pro 14" */
+    @media (max-width: 1512px) {
+        .footer-text {
+            font-size: 12px;
+        }
+    }
+
+    /* MacBook Air 13" y laptops medianas */
+    @media (max-width: 1440px) {
+        .footer-text {
+            font-size: 12px;
+        }
+    }
+
+    /* Laptops pequeñas */
+    @media (max-width: 1366px) {
+        .footer-text {
+            font-size: 11px;
+        }
+        section {
+            height: 4vh;
+        }
+    }
+
+    /* Tablets landscape y pantallas pequeñas */
+    @media (max-width: 1024px) {
+        section {
+            height: 5vh;
+            padding: 0 20px;
+        }
+        .footer-text {
+            font-size: 12px;
+        }
+    }
+
+    /* Tablets portrait */
+    @media (max-width: 768px) {
+        section {
+            height: 6vh;
+            padding: 0 15px;
+        }
+        .footer-text {
+            font-size: 11px;
+        }
+    }
+
+    /* Móviles landscape */
+    @media (max-width: 667px) {
+        section {
+            height: 7vh;
+            padding: 0 12px;
+        }
+        .footer-text {
+            font-size: 10px;
+        }
+    }
+
+    /* Móviles portrait */
+    @media (max-width: 480px) {
+        section {
+            height: 8vh;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+        .footer-text {
+            font-size: 9px;
+            line-height: 1.2;
+        }
+    }
+
+    /* Móviles muy pequeños */
+    @media (max-width: 375px) {
+        section {
+            height: 10vh;
+            padding: 0 8px;
+        }
+        .footer-text {
+            font-size: 8px;
+        }
+    }
+</style>

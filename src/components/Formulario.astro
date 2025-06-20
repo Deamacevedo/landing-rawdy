@@ -1,0 +1,446 @@
+---
+import "@fontsource-variable/inter";
+import Correo from "../components/icons/correo.svg";
+---
+
+<div
+  class="form-principal w-md h-96 bg-blue-100 rounded-[50px] py-8 flex flex-col justify-center items-center shadow-lg max-w-md mx-auto md:mx-0 font-[Inter_Variable] form-container"
+>
+  <div class="space-y-12 form-content">
+    <div class="text-center">
+      <h3 class="text-xl font-bold text-slate-950 leading-relaxed form-title">
+        Lanzamiento Sábado 28 de Junio<br />
+        a las 10:00 AM
+      </h3>
+    </div>
+
+    <form
+      id="convertkit-form"
+      class="space-y-4 flex flex-col items-center seva-form formkit-form"
+      action="https://app.kit.com/forms/8209598/subscriptions"
+      method="post"
+      data-sv-form="8209598"
+      data-uid="582f7c0194"
+      data-format="inline"
+      data-version="5"
+    >
+      <div class="w-3/4 email-container">
+        <div
+          class="casilla-correo flex items-center bg-gray-50 rounded-lg border-2 border-green-200 shadow-sm px-4 py-3"
+        >
+          <Correo class="mr-1 text-zinc-500" />
+          <input
+            type="email"
+            name="email_address"
+            placeholder="Tu correo"
+            class="bg-transparent flex-1 text-zinc-800 placeholder-zinc-500 outline-none email-input"
+            required
+            id="ck-email"
+          />
+        </div>
+        <div
+          id="error-message"
+          class="text-red-500 text-xs mt-1 text-center hidden"
+        >
+        </div>
+      </div>
+      <div class="boton-text flex flex-col items-center">
+        <button
+          type="submit"
+          class="boton-form bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-colors relative overflow-hidden"
+          id="submit-btn"
+        >
+          <span id="btn-text">Reservar mi cupo</span>
+          <div
+            id="spinner"
+            class="hidden absolute inset-0 flex items-center justify-center"
+          >
+            <div
+              class="animate-spin rounded-full h-5 w-5 border-b-2 border-white"
+            >
+            </div>
+          </div>
+          <div
+            id="success-icon"
+            class="hidden absolute inset-0 items-center flex justify-center"
+          >
+            <svg
+              class="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+        </button>
+
+        <p class="text-neutral-500 text-center disclaimer-text">
+          *Recibirás la invitación en tu correo
+        </p>
+      </div>
+    </form>
+
+    <div class="text-center">
+      <p class="text-xl font-bold free-text">
+        <span class="text-red-600">100%</span>
+        <span class="text-black"> Gratis - Solo necesitas registrarte</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Tu bloque <style> original va aquí sin cambios. */
+  /* Lo he omitido por brevedad, pero debes mantenerlo tal cual. */
+  .form-principal {
+    font-family: "Inter Variable", sans-serif;
+  }
+  .boton-text p {
+    font-size: 10px;
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20%,
+    60% {
+      transform: translateX(-5px);
+    }
+    40%,
+    80% {
+      transform: translateX(5px);
+    }
+  }
+
+  .shake {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+
+  /* MacBook Pro 16" y pantallas grandes */
+  @media (max-width: 1728px) {
+    .form-container {
+      /* width: 400px;
+     height: 340px; */
+    }
+    .form-title {
+      transform: translateY(15px);
+      font-size: 19px;
+    }
+    .free-text {
+      font-size: 19px;
+      transform: translateY(-20px);
+    }
+  }
+
+  /* MacBook Pro 14" */
+  @media (max-width: 1512px) {
+    .form-container {
+      width: 400px;
+      height: 360px;
+    }
+    .form-title {
+      font-size: 18px;
+    }
+    .free-text {
+      font-size: 18px;
+    }
+  }
+
+  /* MacBook Air 13" y laptops medianas */
+  @media (max-width: 1440px) {
+    .form-container {
+      width: 360px;
+      height: 300px;
+    }
+    .form-title {
+      font-size: 17px;
+      transform: translateY(25px);
+    }
+    .free-text {
+      font-size: 17px;
+      transform: translateY(-25px);
+    }
+  }
+
+  /* Laptops pequeñas */
+  @media (max-width: 1366px) {
+    .form-container {
+      width: 340px;
+      height: 280px;
+    }
+    .form-title {
+      font-size: 14px;
+    }
+    .free-text {
+      font-size: 12px;
+    }
+    .boton-form {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .boton-text p {
+      font-size: 8px;
+    }
+  }
+
+  /* Tablets landscape y pantallas pequeñas */
+  @media (max-width: 1048px) {
+    .form-container {
+      width: 400px;
+      height: 320px;
+      margin: 0 auto;
+    }
+    .form-title {
+      font-size: 18px;
+    }
+    .free-text {
+      font-size: 18px;
+    }
+  }
+
+  /* Tablets portrait */
+  @media (max-width: 768px) {
+    .form-container {
+      width: 90%;
+      max-width: 380px;
+      height: 300px;
+    }
+    .form-title {
+      font-size: 16px;
+    }
+    .free-text {
+      font-size: 16px;
+    }
+    .email-container {
+      width: 85%;
+    }
+  }
+
+  /* Móviles landscape */
+  @media (max-width: 667px) {
+    .form-container {
+      width: 95%;
+      max-width: 350px;
+      height: 280px;
+      border-radius: 30px;
+    }
+    .form-title {
+      font-size: 15px;
+    }
+    .free-text {
+      font-size: 15px;
+    }
+    .boton-form {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+  }
+
+  /* Móviles portrait */
+  @media (max-width: 480px) {
+    .form-container {
+      width: 95%;
+      max-width: 320px;
+      height: 260px;
+      border-radius: 25px;
+      padding: 20px 0;
+    }
+    .form-content {
+      gap: 16px;
+    }
+    .form-title {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .free-text {
+      font-size: 14px;
+    }
+    .email-input {
+      font-size: 14px;
+    }
+    .boton-form {
+      padding: 8px 14px;
+      font-size: 12px;
+    }
+    .disclaimer-text {
+      font-size: 9px;
+    }
+  }
+
+  /* Móviles muy pequeños */
+  @media (max-width: 375px) {
+    .form-container {
+      width: 98%;
+      max-width: 300px;
+      height: 240px;
+      border-radius: 20px;
+    }
+    .form-title {
+      font-size: 13px;
+    }
+    .free-text {
+      font-size: 13px;
+    }
+    .email-input {
+      font-size: 13px;
+    }
+    .boton-form {
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+    .disclaimer-text {
+      font-size: 8px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById(
+      "convertkit-form"
+    ) as HTMLFormElement | null;
+    const emailInput = document.getElementById(
+      "ck-email"
+    ) as HTMLInputElement | null;
+    const submitBtn = document.getElementById(
+      "submit-btn"
+    ) as HTMLButtonElement | null;
+    const btnText = document.getElementById("btn-text") as HTMLElement | null;
+    const spinner = document.getElementById("spinner") as HTMLElement | null;
+    const successIcon = document.getElementById(
+      "success-icon"
+    ) as HTMLElement | null;
+    const errorMessage = document.getElementById(
+      "error-message"
+    ) as HTMLElement | null;
+
+    if (
+      !form ||
+      !emailInput ||
+      !submitBtn ||
+      !btnText ||
+      !spinner ||
+      !successIcon ||
+      !errorMessage
+    ) {
+      console.error(
+        "Error: No se encontraron todos los elementos del DOM para el formulario."
+      );
+      return;
+    }
+
+    function isValidEmail(email: string): boolean {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    function handleFormError(message: string) {
+      if (errorMessage) {
+        errorMessage.textContent = message;
+        errorMessage.classList.remove("hidden");
+      }
+
+      const parent = emailInput!.parentElement;
+      if (parent) {
+        parent.classList.add("border-red-500", "shake");
+        parent.classList.remove("border-green-200");
+        setTimeout(() => parent.classList.remove("shake"), 500);
+      }
+
+      // Reset button state
+      submitBtn!.disabled = false;
+      btnText!.classList.remove("opacity-0");
+      spinner!.classList.add("hidden");
+    }
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const email = emailInput.value.trim();
+      const parent = emailInput.parentElement;
+
+      if (!isValidEmail(email)) {
+        handleFormError("Por favor ingresa un correo válido.");
+        return;
+      }
+
+      errorMessage.classList.add("hidden");
+      if (parent) {
+        parent.classList.remove("border-red-500");
+        parent.classList.add("border-green-200");
+      }
+
+      submitBtn.disabled = true;
+      btnText.classList.add("opacity-0");
+      spinner.classList.remove("hidden");
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          // --- Éxito ---
+          spinner.classList.add("hidden");
+          successIcon.classList.remove("hidden");
+
+          setTimeout(() => {
+            btnText.textContent = "¡Registro exitoso!";
+            btnText.classList.remove("opacity-0");
+            successIcon.classList.add("hidden");
+          }, 500);
+
+          setTimeout(() => {
+            form.reset();
+            btnText.textContent = "Reservar mi cupo";
+            submitBtn.disabled = false;
+            if (parent)
+              parent.classList.remove("border-green-200", "border-red-500");
+          }, 3000);
+        } else {
+          // --- Error del servidor ---
+          handleFormError("Hubo un error. Inténtalo de nuevo.");
+        }
+      } catch (error) {
+        // --- Error de red ---
+        console.error("Error al enviar el formulario:", error);
+        handleFormError("Error de conexión. Revisa tu internet.");
+      }
+    });
+
+    emailInput.addEventListener("input", function () {
+      const email = emailInput.value.trim();
+      const parent = emailInput.parentElement;
+      if (!parent) return;
+
+      if (isValidEmail(email)) {
+        parent.classList.add("border-green-200");
+        parent.classList.remove("border-yellow-400", "border-red-500");
+        errorMessage.classList.add("hidden");
+      } else if (email === "") {
+        parent.classList.remove(
+          "border-green-200",
+          "border-yellow-400",
+          "border-red-500"
+        );
+        errorMessage.classList.add("hidden");
+      } else {
+        parent.classList.add("border-yellow-400");
+        parent.classList.remove("border-green-200");
+      }
+    });
+  });
+</script>

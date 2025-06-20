@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+import Fondo from "../assets/fondo.png"
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./iconorawdy.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Masterclass Privada - Dr. Rawdy Reales | Secretos para una Tiroides Saludable</title>
+    <meta name="description" content="Únete a la masterclass gratuita del Dr. Rawdy Reales y descubre los secretos para una tiroides saludable. Especialista en Endocrinología Certificado." />
+    
+  </head>
+  <body class="gradient-bg">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    font-family: "Montserrat Variable", "Raleway Variable",sans-serif;
+  }
+  html,
+  body {
+	background-image:url(../assets/fondo.png);
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* Responsive para el fondo */
+  @media (max-width: 1024px) {
+    html,
+    body {
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  }
+
+  @media (max-width: 768px) {
+    html,
+    body {
+      background-attachment: scroll;
+    }
+  }
+
+  /* .gradient-bg {
+    background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 50%, #6dcffc 100%);
+  } */
+</style>

@@ -1,0 +1,457 @@
+---
+import { Image } from "astro:assets";
+import Fotoder from "../assets/rawdyy.png";
+import Formulario from "./Formulario.astro";
+import Brainlogo from "../components/icons/Brain.svg";
+import Pill from "../components/icons/Pill.svg";
+import VideoCamera from "../components/icons/VideoCamera.svg";
+import "@fontsource-variable/montserrat";
+import "@fontsource-variable/raleway/wght-italic.css";
+import '@fontsource-variable/lexend';
+---
+
+<main class="flex flex-row m-0 p-0">
+  <!-- Seccion Izquierda -->
+  <section class="izquierda flex flex-col items-star justify-center max-w-fit">
+    <!-- Main Title -->
+    <div class="">
+      <div class="subtitulos flex flex-col items-star space-y-6 lg:space-y-10 pb-20">
+        <h1
+          class="font-semibold font-['Montserrat_Variable'] text-sky-950 tracking-wide leading-tight"
+        >
+          MASTERCLASS PRIVADA:
+        </h1>
+
+        <h2 class="subtitulo text-4xl font-['Montserrat_Variable']">
+          <span class="font-bold text-sky-950">Descubre</span>
+          <span class="font-normal text-zinc-800">
+            los Secretos para una Tiroides Saludable</span
+          >
+        </h2>
+        <div class="">
+          <p
+            class="subtitulo2 text-3xl font-light font-['Montserrat_Variable'] text-zinc-800 text-center max-w-4xl"
+          >
+            Una <span class="font-bold text-sky-950">clase gratuita</span> en vivo
+            con el
+            <span class="font-bold text-sky-950">Dr. Rawdy Reales</span>
+          </p>
+          <p
+            class="subtitulo2x text-xl lg:text-2xl xl:text-3xl font-light font-['Montserrat_Variable'] text-zinc-800 text-center max-w-4xl"
+          >
+            <span class="font-bold font-[Raleway_Variable] italic"
+              >Especialista en Endocrinología Certificado</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- Content Section -->
+      <div class="flex flex-row gap-8 content-section">
+        <!-- Registration Card -->
+        <Formulario />
+
+        <!-- Benefits Section -->
+        <div class="beneficios benefits-section">
+          <p
+            class="text-2xl font-light w-[450px] font- text-black tracking-wide leading-relaxed question-text mt-2 mb-16"
+          >
+            ¿Sufres de <span class="font-bold text-sky-950">Fatiga</span>,
+            <span class="font-bold text-sky-950">aumento de peso</span>,
+            <span class="font-bold text-sky-950">cabello débil</span>?
+          </p>
+          <div class="div-abajo">
+            <p
+              class="text-xl lg:text-2xl font-light  text-black tracking-tight leading-relaxed discover-text mb-10"
+            >
+              En esta masterclass <span class="font-bold text-sky-950"
+                >descubrirás:</span
+              >
+            </p>
+
+            <div class=" benefits-list ">
+              <div class="flex items-center gap-3">
+                <Brainlogo />
+
+                <p
+                  class="text-xl lg:text-2xl font-light  text-black tracking-tight leading-[50px] benefit-text"
+                >
+                  La <span class="font-bold text-sky-950">conexión real</span> con
+                  tu tiroides
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <Pill/>
+                <p
+                  class="text-xl lg:text-2xl font-light  text-black tracking-tight leading-[50px] benefit-text"
+                >
+                  <span class="font-bold text-sky-950">Soluciones</span> que no te
+                  han contado
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <VideoCamera/>
+                <p
+                  class="text-xl lg:text-2xl font-light text-black tracking-tight leading-[50px] benefit-text"
+                >
+                  Pregunta tus dudas <span class="font-bold text-sky-950"
+                    >EN VIVO</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="derecha flex items-center justify-center">
+    <div class="">
+      <!-- Imagen principal del doctor -->
+      <div class="">
+        <Image src={Fotoder} alt="Foto Rawdy" class="doctor-image" />
+      </div>
+    </div>
+  </section>
+
+  <style>
+    main {
+      height: 97vh;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 75px;
+    }
+    .izquierda {
+      width: 60%;
+      height: auto;
+      margin: auto 0px auto 140px;
+    }
+	.beneficios {
+		font-family: 'Lexend Variable', sans-serif;
+	}
+
+    .doctor-shadow {
+      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
+    }
+    .card-shadow {
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    }
+    .badge-shadow {
+      box-shadow: 7px 10px 50px -50px rgba(255, 255, 255, 1);
+    }
+
+    /* MacBook Pro 16" y pantallas grandes */
+    @media (max-width: 1748px) {
+      h1 {
+        font-size: 72px;
+      }
+      .izquierda {
+        margin: auto 0px auto 120px;
+      }
+    }
+
+	@media (max-width: 1685px) {
+      h1 {
+        font-size: 67px;
+      }
+	  .subtitulo {
+		font-size: 33px;
+		text-align: center;
+	  }
+
+      .izquierda {
+        margin: auto 0px auto 110px;
+      }
+      /* .question-text {
+        width: 380px;
+        font-size: 18px;
+      }
+      .discover-text {
+        font-size: 16px;
+      }
+      .benefit-text {
+        font-size: 16px;
+        line-height: 40px;
+      } */
+    }
+	@media (max-width: 1598px) {
+      h1 {
+        font-size: 65px;
+      }
+	  .subtitulo {
+		font-size: 30px;
+		text-align: center;
+	  }
+	  .subtitulo2 {
+		font-size: 28px;
+	  }
+    }
+
+    /* MacBook Pro 14" */
+    @media (max-width: 1512px) {
+      h1 {
+        font-size: 60px;
+      }
+	  .subtitulo {
+		font-size: 28px;
+	  }
+	  .subtitulo2{
+		font-size: 24px;
+	  }
+	  .subtitulo2x {
+		font-size: 24px;
+	  }
+      .izquierda {
+        margin: auto 0px auto 100px;
+      }
+      .question-text {
+		margin-top: 12px;
+		margin-bottom: 60px;
+        width: 400px;
+        font-size: 18px;
+      }
+      .discover-text {
+        font-size: 22px;
+      }
+      .benefit-text {
+        font-size: 18px;
+        leading: 45px;
+      }
+    }
+
+    /* MacBook Air 13" y laptops medianas */
+    @media (max-width: 1440px) {
+      h1 {
+        font-size: 56px;
+      }
+      .izquierda {
+        margin: auto 0px auto 80px;
+      }
+      .question-text {
+        width: 380px;
+        font-size: 18px;
+      }
+      .discover-text {
+        font-size: 16px;
+      }
+      .benefit-text {
+        font-size: 16px;
+        line-height: 40px;
+      }
+    }
+
+    /* Laptops pequeñas */
+    @media (max-width: 1366px) {
+      main {
+        height: auto;
+        min-height: 97vh;
+      }
+      h1 {
+        font-size: 52px;
+      }
+      .izquierda {
+        width: 58%;
+        margin: auto 0px auto 60px;
+      }
+      .content-section {
+        gap: 24px;
+      }
+      .question-text {
+        width: 350px;
+        font-size: 16px;
+      }
+      .discover-text {
+        font-size: 15px;
+      }
+      .benefit-text {
+        font-size: 15px;
+        line-height: 35px;
+      }
+    }
+
+	@media (max-width: 1204px) {
+		h1 {
+			font-size: 46px;
+		}
+		.subtitulo2 {
+			font-size: 20px;
+		}
+		.subtitulo2x {
+			font-size: 20px;
+		}
+	}
+
+    /* Tablets landscape y pantallas pequeñas */
+    @media (max-width: 1024px) {
+      main {
+        flex-direction: column;
+        height: auto;
+        padding: 0px 20px;
+      }
+      .izquierda {
+        width: 100%;
+        margin: 0;
+        max-width: none;
+        align-items: center;
+      }
+	  .subtitulos {
+		padding-bottom: 20px;
+	  }
+	.derecha {
+	  width: 100%;
+	  margin-top: 0px;
+	  order: -1;
+	  display: flex;
+	  justify-content: center;
+	}
+      h1 {
+        font-size: 54px;
+        text-align: center;
+      }
+	  .subtitulo {
+		font-size: 26px;
+		text-justify: distribute;
+	  }
+      .content-section {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+      }
+      .benefits-section {
+        align-items: center;
+        text-align: center;
+      }
+      .question-text {
+        width: 100%;
+        max-width: 500px;
+        font-size: 18px;
+        text-align: center;
+		margin-top: 0;
+		margin-bottom: 10px;
+      }
+      .discover-text {
+        font-size: 26px;
+        text-align: center;
+		margin-bottom: 20px;
+      }
+      .benefits-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+		margin-bottom: 20px;
+      }
+      .benefit-text {
+        font-size: 16px;
+        line-height: normal;
+        text-align: center;
+      }
+      .doctor-image {
+        max-width: 400px;
+        height: auto;
+      }
+    }
+
+    /* Tablets portrait */
+    @media (max-width: 768px) {
+      main {
+        padding: 30px 15px;
+      }
+      h1 {
+        font-size: 36px;
+      }
+	  .subtitulo {
+		text-justify: distribute;
+	  }
+	  .subtitulo2 {
+		text-justify: distribute;
+	  }
+      .question-text {
+        font-size: 16px;
+      }
+      .discover-text {
+        font-size: 15px;
+      }
+      .benefit-text {
+        font-size: 14px;
+      }
+      .doctor-image {
+        max-width: 320px;
+      }
+    }
+
+    /* Móviles landscape */
+    @media (max-width: 667px) {
+      main {
+        padding: 20px 12px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .question-text {
+        font-size: 14px;
+      }
+      .discover-text {
+        font-size: 13px;
+      }
+      .benefit-text {
+        font-size: 12px;
+      }
+      .doctor-image {
+        max-width: 280px;
+      }
+    }
+
+    /* Móviles portrait */
+    @media (max-width: 480px) {
+      main {
+        padding: 15px 8px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 1.2;
+      }
+      .question-text {
+        font-size: 13px;
+        width: 100%;
+      }
+      .discover-text {
+        font-size: 12px;
+      }
+      .benefit-text {
+        font-size: 11px;
+      }
+      .benefits-list {
+        gap: 12px;
+      }
+      .doctor-image {
+        max-width: 240px;
+      }
+    }
+
+    /* Móviles muy pequeños */
+    @media (max-width: 375px) {
+      h1 {
+        font-size: 20px;
+      }
+      .question-text {
+        font-size: 12px;
+      }
+      .discover-text {
+        font-size: 11px;
+      }
+      .benefit-text {
+        font-size: 10px;
+      }
+      .doctor-image {
+        max-width: 200px;
+      }
+    }
+  </style>
+</main>
