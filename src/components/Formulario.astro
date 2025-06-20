@@ -24,11 +24,11 @@ import Correo from "../components/icons/correo.svg";
       data-format="inline"
       data-version="5"
     >
-      <div class="w-3/4 email-container">
+      <div class="w-3/4 email-container flex flex-col items-center justify-center">
         <div
-          class="casilla-correo flex items-center bg-gray-50 rounded-lg border-2 border-green-200 shadow-sm px-4 py-3"
+          class="flex items-center bg-gray-50 rounded-lg border-2 border-green-200 shadow-sm px-4 py-3 min-w-fit"
         >
-          <Correo class="mr-1 text-zinc-500" />
+          <Correo class=" mr-1 text-zinc-500" />
           <input
             type="email"
             name="email_address"
@@ -148,9 +148,9 @@ import Correo from "../components/icons/correo.svg";
     .form-title {
       font-size: 18px;
     }
-    .free-text {
+    /* .free-text {
       font-size: 18px;
-    }
+    } */
   }
 
   /* MacBook Air 13" y laptops medianas */
@@ -164,7 +164,7 @@ import Correo from "../components/icons/correo.svg";
       transform: translateY(25px);
     }
     .free-text {
-      font-size: 17px;
+      /* font-size: 17px; */
       transform: translateY(-25px);
     }
   }
@@ -176,7 +176,7 @@ import Correo from "../components/icons/correo.svg";
       height: 280px;
     }
     .form-title {
-      font-size: 14px;
+      /* font-size: 14px; */
     }
     .free-text {
       font-size: 12px;
