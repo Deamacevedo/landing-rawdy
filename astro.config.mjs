@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  base: 'masterclass-tiroides',
+  base: '/masterclass-tiroides/',
   vite: {
     plugins: [tailwindcss()]
   }
