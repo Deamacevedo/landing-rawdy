@@ -20,7 +20,7 @@ import Correo from "../components/icons/correo.svg";
       action="https://app.kit.com/forms/8209598/subscriptions"
       method="post"
     >
-      <div class="w-3/4 email-container flex flex-col items-center justify-center">
+      <div class="w-3/4 email-container flex flex-col items-center justify-center px-5">
         <div
           class="flex items-center bg-gray-50 rounded-lg border-2 border-green-200 shadow-sm px-4 py-3 min-w-fit"
         >
@@ -184,6 +184,7 @@ import Correo from "../components/icons/correo.svg";
       font-size: 8px;
     }
   }
+
   @media (max-width: 1160px) {
         .form-title {
       font-size: 14px;
@@ -198,6 +199,12 @@ import Correo from "../components/icons/correo.svg";
     .boton-text p {
       font-size: 8px;
     }
+  }
+  @media (min-width: 1067px) and (max-width: 1160px) {
+    .email-container {
+      padding: 0 20px;
+    }
+
   }
 
   /* Tablets landscape y pantallas pequeñas */
@@ -411,7 +418,7 @@ import Correo from "../components/icons/correo.svg";
             btnText.textContent = "¡Registro exitoso!";
             btnText.classList.remove("opacity-0");
             successIcon.classList.add("hidden");
-          }, 500);
+          }, 1000);
 
           setTimeout(() => {
             form.reset();
