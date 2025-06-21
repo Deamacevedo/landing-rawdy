@@ -16,13 +16,9 @@ import Correo from "../components/icons/correo.svg";
 
     <form
       id="convertkit-form"
-      class="space-y-4 flex flex-col items-center seva-form formkit-form"
+      class="space-y-4 flex flex-col items-center "
       action="https://app.kit.com/forms/8209598/subscriptions"
       method="post"
-      data-sv-form="8209598"
-      data-uid="582f7c0194"
-      data-format="inline"
-      data-version="5"
     >
       <div class="w-3/4 email-container flex flex-col items-center justify-center">
         <div
@@ -95,9 +91,8 @@ import Correo from "../components/icons/correo.svg";
 </div>
 
 <style>
-  /* Tu bloque <style> original va aquí sin cambios. */
-  /* Lo he omitido por brevedad, pero debes mantenerlo tal cual. */
-  .form-principal {
+
+.form-principal {
     font-family: "Inter Variable", sans-serif;
   }
   .boton-text p {
@@ -177,6 +172,21 @@ import Correo from "../components/icons/correo.svg";
     }
     .form-title {
       /* font-size: 14px; */
+    }
+    .free-text {
+      font-size: 12px;
+    }
+    .boton-form {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .boton-text p {
+      font-size: 8px;
+    }
+  }
+  @media (max-width: 1160px) {
+        .form-title {
+      font-size: 14px;
     }
     .free-text {
       font-size: 12px;
